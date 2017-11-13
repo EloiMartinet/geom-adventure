@@ -2,7 +2,10 @@
 
 // add all your types of 2D curves here 
 #include "curve2DLinear.h"
+#include "curve2DBezier.h"
 #include "curve1DLinear.h"
+#include "curve1DLagrange.h"
+#include "curve2DInertia.h"
 
 Scene *Scene::_instance = NULL;
 
@@ -10,6 +13,7 @@ using namespace std;
 
 // add 2D curve builders here 
 void Scene::initCurveBuilders() {
+  addCurveBuilder(new Curve2DInertiaConstructor());
   addCurveBuilder(new Curve2DLinearConstructor());
 }
 
