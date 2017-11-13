@@ -20,6 +20,7 @@ void Scene::initCurveBuilders() {
 // add 1D curve builders (functions) here
 void Scene::initFunctionBuilders() {
   addFunctionBuilder(new Curve1DLinearConstructor());
+  addFunctionBuilder(new Curve1DLagrangeConstructor());
 }
 
 
