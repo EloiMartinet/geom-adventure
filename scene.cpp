@@ -6,6 +6,7 @@
 #include "curve1DLinear.h"
 #include "curve1DLagrange.h"
 #include "curve2DInertia.h"
+#include "curve1DShepard.h"
 
 Scene *Scene::_instance = NULL;
 
@@ -20,7 +21,7 @@ void Scene::initCurveBuilders() {
 // add 1D curve builders (functions) here
 void Scene::initFunctionBuilders() {
   addFunctionBuilder(new Curve1DLinearConstructor());
-  addFunctionBuilder(new Curve1DLagrangeConstructor());
+  addFunctionBuilder(new Curve1DShepardConstructor());
 }
 
 
