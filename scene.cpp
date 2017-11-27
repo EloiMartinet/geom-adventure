@@ -7,6 +7,9 @@
 #include "curve1DLagrange.h"
 #include "curve2DInertia.h"
 #include "curve1DShepard.h"
+#include "curve2DTriangulation.h"
+#include "curve2DBezier.h"
+#include "curve2DTrace.h"
 
 Scene *Scene::_instance = NULL;
 
@@ -16,6 +19,8 @@ using namespace std;
 void Scene::initCurveBuilders() {
   addCurveBuilder(new Curve2DInertiaConstructor());
   addCurveBuilder(new Curve2DLinearConstructor());
+  addCurveBuilder(new Curve2DBezierConstructor());
+  addCurveBuilder(new Curve2DTraceConstructor());
 }
 
 // add 1D curve builders (functions) here
