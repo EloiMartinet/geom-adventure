@@ -10,7 +10,7 @@
 //#include "curve2DTriangulation.h"
 #include "curve2DBezier.h"
 //#include "curve2DTrace.h"
-//#include "curve2DHermite.h"
+#include "curve2DHermite.h"
 
 Scene *Scene::_instance = NULL;
 
@@ -22,7 +22,7 @@ void Scene::initCurveBuilders() {
   addCurveBuilder(new Curve2DLinearConstructor());
   addCurveBuilder(new Curve2DBezierConstructor());
   //addCurveBuilder(new Curve2DTraceConstructor());
-  //addCurveBuilder(new Curve2DHermiteConstructor());
+  addCurveBuilder(new Curve2DHermiteConstructor());
 }
 
 // add 1D curve builders (functions) here
